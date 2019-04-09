@@ -1,1 +1,37 @@
-﻿
+﻿.navigation {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    height: 70px;
+    background: #000;
+    box-shadow: 0 1px 5px #ff6a00
+}
+
+.navigation-logo {
+    width: 10%;
+    height: 100%;
+}
+
+.navigation-pagesPanel {
+    position: relative;
+    display: flex;
+    height: 90%;
+}
+
+.navigation-pagesPanel-item {
+    color: #777;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 0 2vw;
+    line-height: 70px;
+    display: inline-flex;
+    width: auto;
+    max-width: 200px;
+}
+
+    .navigation-pagesPanel-item:hover {
+        background: -webkit-linear-gradient(#ffd800, #ff6a00);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
