@@ -8,20 +8,24 @@
 }
 
 .navigation-logo {
-    width: 10%;
-    height: 100%;
+    font-size: 50px;
+    background: -webkit-linear-gradient(#ffd800, #ff6a00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.navigation-pagesPanel {
+.navigation-panel {
     position: relative;
     display: flex;
-    height: 90%;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    justify-content: space-between;
 }
 
-.navigation-pagesPanel-item {
-    color: #777;
+.navigation-panel-item {
+    color: #ffffff;
     text-decoration: none;
-    font-weight: 700;
     font-size: 18px;
     padding: 0 2vw;
     line-height: 70px;
@@ -30,7 +34,7 @@
     max-width: 200px;
 }
 
-    .navigation-pagesPanel-item:hover {
+    .navigation-panel-item:hover {
         background: -webkit-linear-gradient(#ffd800, #ff6a00);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
