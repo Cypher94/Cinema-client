@@ -4,6 +4,7 @@
     display: flex;
     height: 70px;
     background: #000;
+    z-index: 1000;
 }
 
 .navigation-logo {
@@ -11,6 +12,7 @@
     background: -webkit-linear-gradient(#ffd800, #ff6a00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding-right: 2vw;
 }
 
 .navigation-panel {
@@ -18,7 +20,7 @@
     display: flex;
     height: 100%;
     margin: 0 auto;
-    max-width: 1200px;
+    width: 50%;
     justify-content: space-between;
 }
 
@@ -31,6 +33,10 @@
     display: inline-flex;
     width: auto;
     max-width: 200px;
+}
+
+.navigation-panel-itemLast {
+    padding-right: 0px;
 }
 
     .navigation-panel-item:hover {
