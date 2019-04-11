@@ -1,0 +1,50 @@
+﻿.moviesList {
+    color: #fff;
+    top: 100px;
+    position: relative;
+    display: flex;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.moviesList-item {
+    position: relative;
+    display: flex;
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    border: 1px solid #969696;
+    margin-bottom: 25px;
+}
+
+.moviesList-item-miniature {
+}
+
+.moviesList-item-title {
+    position: absolute;
+    top: 0px;
+    left: 205px;
+}
+
+.moviesList-item-description {
+    top: 40px;
+    position: absolute;
+    font-size: 16px;
+    left: 205px;
+}
+
+.moviesList-item-tags {
+    position: absolute;
+    left: 205px;
+    top: 260px;
+}
+
+.moviesList-item-rating {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+}

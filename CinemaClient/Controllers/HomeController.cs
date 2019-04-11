@@ -1,12 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CinemaClient.Services.MoviesService;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CinemaClient.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IMoviesRepository _moviesRepository;
+
+        public HomeController(IMoviesRepository moviesRepository)
+        {
+            _moviesRepository = moviesRepository;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            var moviesList = _moviesRepository.GetMoviesList();
+            return View(moviesList);
         }
     }
 }
