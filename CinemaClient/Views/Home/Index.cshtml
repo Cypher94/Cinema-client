@@ -24,8 +24,7 @@
                             }
                             <span>@movie.Duration</span>
                         </h4>
-                        <!--TODO add buy ticket link-->
-                        <a href="#" class="heroCarousel-item-detailsBuyTicket">Buy ticket</a>
+                        <a class="heroCarousel-item-detailsBuyTicket" asp-controller="Home" asp-action="MovieDetails" asp-route-id="@movie.Id">Details</a>
                     </div>
                     <img src="@movie.CarouselImageUrl" class="heroCarousel-item-image" />
                 </div>
@@ -34,24 +33,30 @@
     </section>
 
     <section class="moviesList">
-        @foreach (var movie in Model)
-        {
-            <div class="moviesList-item">
-                <img src="@movie.MiniatureImageUrl" class="moviesList-item-miniature" />
-                <h2 class="moviesList-item-title">@movie.Name</h2>
-                <p class="moviesList-item-description">@movie.Description</p>
-                <h6 class="moviesList-item-tags">
-                    @foreach (var tag in movie.Tags)
-                    {
-                        <span>@tag |</span>
-                    }
-                    <span>@movie.Duration</span>
-                </h6>
-                <h2 class="moviesList-item-rating">Rating: @movie.Rating</h2>
-            </div>
-        }
-    </section>
+        <div class="moviesList-headerBar">
+            <h3 class="moviesList-headerBar-title">MOVIE LIST</h3>
+        </div>
+        <div class="moviesList-container">
+            @{
+                int iterator = 0;
 
+                for (int i = 1; i < 3; i++)
+                {
+                    <div class="moviesList-containerRow">
+                        @for (int j = iterator; j < i * 5; j++)
+                        {
+                            <div class="moviesList-containerRow-item">
+                                <img src="@Model.ElementAt(j).MiniatureImageUrl" class="moviesList-containerRow-itemImage" />
+                                <a class="moviesList-containerRow-itemTitle" asp-controller="Home" asp-action="MovieDetails" asp-route-id="@Model.ElementAt(j).Id">@Model.ElementAt(j).Name</a>
+
+                            </div>
+                            iterator = j + 1;
+                        }
+                    </div>
+                }
+            }
+        </div>
+    </section>
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

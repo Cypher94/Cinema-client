@@ -17,5 +17,11 @@ namespace CinemaClient.Controllers
             var moviesList = _moviesRepository.GetMoviesList();
             return View(moviesList);
         }
+
+        public IActionResult MovieDetails(int id)
+        {
+            var movie = _moviesRepository.GetMovieDetails(id);
+            return View(movie);
+        }
     }
 }
