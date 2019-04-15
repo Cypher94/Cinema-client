@@ -7,3 +7,10 @@
     box-sizing: border-box;
     margin: 0px;
 }
+
+.content-header {
+    display: flex;
+    position: relative;
+    top: 100px;
+    color: #ffffff;
+}
