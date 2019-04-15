@@ -201,3 +201,27 @@
     text-decoration: none;
     color: #fff;
 }
+
+@media only screen and (max-width: 1000px) {
+    .slick-arrow-icon {
+        height: 60px;
+        width: 40px;
+    }
+
+    .heroCarousel-item-detailsTitle {
+        left: 0px;
+        font-size: 18px;
+    }
+
+    .heroCarousel-item-detailsTags {
+        left: 0px;
+        font-size: 14px;
+    }
+
+    .heroCarousel-item-detailsBuyTicket {
+        right: 0;
+        padding: 5px;
+        border: 1px solid #969696;
+        font-size: 14px;
+    }
+}
