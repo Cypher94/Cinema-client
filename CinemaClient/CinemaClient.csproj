@@ -11,11 +11,4 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Events\" />
-    <Folder Include="Views\Contact\" />
-    <Folder Include="Views\News\" />
-    <Folder Include="Views\Program\" />
-  </ItemGroup>
-
 </Project>
