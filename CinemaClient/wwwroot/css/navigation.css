@@ -13,6 +13,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding-right: 2vw;
+    align-self: center;
 }
 
 .navigation-panel {
@@ -20,7 +21,6 @@
     display: flex;
     height: 100%;
     margin: 0 auto;
-    width: 50%;
     justify-content: space-between;
 }
 
@@ -44,3 +44,13 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
+@media only screen and (max-width: 1000px) {
+    .navigation-logo {
+        font-size: 30px;
+    }
+
+    .navigation-panel-item  {
+        font-size: 14px;
+    }
+}
