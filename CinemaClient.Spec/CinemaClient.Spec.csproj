@@ -66,6 +66,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
@@ -85,15 +86,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context\Visitor.cs" />
+    <Compile Include="Context\WebSystem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Compile Include="Context\Visitor.IDisposable.cs" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Api\" />
-    <Folder Include="Context\" />
     <Folder Include="Domain\" />
     <Folder Include="Features\" />
     <Folder Include="Hooks\" />
