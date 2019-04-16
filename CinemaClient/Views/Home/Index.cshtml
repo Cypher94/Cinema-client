@@ -52,6 +52,11 @@
                                     <a class="moviesList-containerRow-itemTitle" asp-controller="Home" asp-action="MovieDetails" asp-route-id="@Model.ElementAt(iterator).Id">@Model.ElementAt(iterator).Name</a>
                                 </div>
                             }
+                            else
+                            {
+                                <div class="moviesList-containerRow-placeholder"></div>
+                            }
+
                             iterator++;
                         }
                     </div>

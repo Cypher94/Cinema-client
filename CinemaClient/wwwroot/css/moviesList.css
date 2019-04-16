@@ -33,11 +33,12 @@
     margin-bottom: 20px;
 }
 
+.moviesList-containerRow-placeholder,
 .moviesList-containerRow-item {
     margin: 0 10px;
     width: 18%;
     position: relative;
-    text-align:center;
+    text-align: center;
 }
 
 .moviesList-containerRow-item:hover {
