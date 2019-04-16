@@ -40,17 +40,19 @@
             @{
                 int iterator = 0;
 
-                for (int i = 1; i < 3; i++)
+                for (int i = 0; i < Math.Ceiling(Model.Count() / 5.0); i++)
                 {
                     <div class="moviesList-containerRow">
-                        @for (int j = iterator; j < i * 5; j++)
+                        @for (int j = 0; j < 5; j++)
                         {
-                            <div class="moviesList-containerRow-item">
-                                <img src="@Model.ElementAt(j).MiniatureImageUrl" class="moviesList-containerRow-itemImage" />
-                                <a class="moviesList-containerRow-itemTitle" asp-controller="Home" asp-action="MovieDetails" asp-route-id="@Model.ElementAt(j).Id">@Model.ElementAt(j).Name</a>
-
-                            </div>
-                            iterator = j + 1;
+                            if (iterator < Model.Count())
+                            {
+                                <div class="moviesList-containerRow-item">
+                                    <img src="@Model.ElementAt(iterator).MiniatureImageUrl" class="moviesList-containerRow-itemImage" />
+                                    <a class="moviesList-containerRow-itemTitle" asp-controller="Home" asp-action="MovieDetails" asp-route-id="@Model.ElementAt(iterator).Id">@Model.ElementAt(iterator).Name</a>
+                                </div>
+                            }
+                            iterator++;
                         }
                     </div>
                 }

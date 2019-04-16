@@ -172,6 +172,36 @@ namespace CinemaClient.Services.MoviesService
                     Duration = "182 min",
                     Rating = 8.2,
                     HeroCarousel = false
+                },
+                new Movie
+                {
+                    Id = 10,
+                    Name = "Lorem ipsum dolor",
+                    MiniatureImageUrl = @"/assets/nature-h-c-200-280-2.jpg",
+                    Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus urna duis convallis convallis tellus id interdum. In mollis nunc sed id semper risus. Eu lobortis elementum nibh tellus. Pulvinar neque laoreet suspendisse interdum consectetur libero id. Volutpat ac tincidunt vitae semper quis lectus nulla at volutpat. Morbi quis commodo odio aenean sed adipiscing. Turpis massa sed elementum tempus egestas sed. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Condimentum lacinia quis vel eros donec. Proin sed libero enim sed faucibus turpis in.",
+                    Tags = new List<string>
+                    {
+                        "Fantasy",
+                        "Science Fiction"
+                    },
+                    Duration = "182 min",
+                    Rating = 8.2,
+                    HeroCarousel = false
+                },
+                new Movie
+                {
+                    Id = 11,
+                    Name = "Lorem ipsum dolor",
+                    MiniatureImageUrl = @"/assets/nature-h-c-200-280-2.jpg",
+                    Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus urna duis convallis convallis tellus id interdum. In mollis nunc sed id semper risus. Eu lobortis elementum nibh tellus. Pulvinar neque laoreet suspendisse interdum consectetur libero id. Volutpat ac tincidunt vitae semper quis lectus nulla at volutpat. Morbi quis commodo odio aenean sed adipiscing. Turpis massa sed elementum tempus egestas sed. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Condimentum lacinia quis vel eros donec. Proin sed libero enim sed faucibus turpis in.",
+                    Tags = new List<string>
+                    {
+                        "Fantasy",
+                        "Science Fiction"
+                    },
+                    Duration = "182 min",
+                    Rating = 8.2,
+                    HeroCarousel = false
                 }
             };
         }
