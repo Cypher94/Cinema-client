@@ -1,0 +1,73 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<CinemaClient.Models.Movie>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="~/slick/slick.css" />
+    <link href="~/css/moviesList.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <section class="heroCarousel">
+        @foreach (var movie in Model)
+        {
+            @if (movie.HeroCarousel)
+            {
+                <div class="heroCarousel-item">
+                    <div class="heroCarousel-item-cover"></div>
+                    <div class="heroCarousel-item-details">
+                        <h1 class="heroCarousel-item-detailsTitle">@movie.Name</h1>
+                        <h4 class="heroCarousel-item-detailsTags">
+                            @foreach (var tag in movie.Tags)
+                            {
+                                <span>@tag |</span>
+                            }
+                            <span>@movie.Duration</span>
+                        </h4>
+                        <a class="heroCarousel-item-detailsBuyTicket" asp-controller="Home" asp-action="MovieDetails" asp-route-id="@movie.Id">Details</a>
+                    </div>
+                    <img src="@movie.CarouselImageUrl" class="heroCarousel-item-image" />
+                </div>
+            }
+        }
+    </section>
+
+    <section class="moviesList">
+        <div class="moviesList-headerBar">
+            <h3 class="moviesList-headerBar-title">MOVIE LIST</h3>
+        </div>
+        <div class="moviesList-container">
+            @{
+                int iterator = 0;
+
+                for (int i = 0; i < Math.Ceiling(Model.Count() / 5.0); i++)
+                {
+                    <div class="moviesList-containerRow">
+                        @for (int j = 0; j < 5; j++)
+                        {
+                            if (iterator < Model.Count())
+                            {
+                                <div class="moviesList-containerRow-item">
+                                    <img src="@Model.ElementAt(iterator).MiniatureImageUrl" class="moviesList-containerRow-itemImage" />
+                                    <a class="moviesList-containerRow-itemTitle" asp-controller="Home" asp-action="MovieDetails" asp-route-id="@Model.ElementAt(iterator).Id">@Model.ElementAt(iterator).Name</a>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="moviesList-containerRow-placeholder"></div>
+                            }
+
+                            iterator++;
+                        }
+                    </div>
+                }
+            }
+        </div>
+    </section>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="~/slick/slick.min.js"></script>
+    <script src="~/slick/slick-init.js"></script>
+
+</body>
