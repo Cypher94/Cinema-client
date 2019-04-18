@@ -88,6 +88,12 @@
   <ItemGroup>
     <Compile Include="Context\Visitor.cs" />
     <Compile Include="Context\WebSystem.cs" />
+    <Compile Include="PageObjects\ContactPage.cs" />
+    <Compile Include="PageObjects\EventsPage.cs" />
+    <Compile Include="PageObjects\HomePage.cs" />
+    <Compile Include="PageObjects\Navigation.cs" />
+    <Compile Include="PageObjects\NewsPage.cs" />
+    <Compile Include="PageObjects\ProgramPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -100,7 +106,6 @@
     <Folder Include="Domain\" />
     <Folder Include="Features\" />
     <Folder Include="Hooks\" />
-    <Folder Include="PageObjects\" />
     <Folder Include="Steps\" />
   </ItemGroup>
   <ItemGroup>
